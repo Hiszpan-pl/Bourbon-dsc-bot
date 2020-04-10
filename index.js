@@ -33,9 +33,6 @@ bot.on('message',  message=>{
             else{
                 message.channel.send('Invalid argument')}
             break;
-            
-        case 'clear':
-        if
     }
 })
 //logowanie
