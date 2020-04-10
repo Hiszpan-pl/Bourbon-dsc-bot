@@ -1,0 +1,42 @@
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+//hasło(token)
+const token = '';
+
+//prefix bota
+var PREFIX = '!';
+var version ='0.0.1';
+
+//kiedy bot jest włączony w konsoli zostanie napisany podany status
+bot.on('ready', () =>{
+    console.log('Bot status: ONLINE')
+})
+
+bot.on('message',  msg=>{
+    if(msg.content ==="Hello"){
+        //msg.reply('POWIEDZ MI CZŁOWIEKU ZA KOGO TY SIE UWAŻASZ BO NA PEWNO NIE ZA MIKOLA BO JAK MOŻNA MYLIĆ TRAKCJĘ I SIEĆ TRAKCYJNĄ. POWIEDZ MI JAK TWOIM ZDANIEM TRAKCJA TO JEST TO CO WISI NAD TORAMI TO JAKIM CUDEM NA PRZYKŁAD NA DWORCU WE WROCŁAWIU MOŻNA USŁYSZEĆ ZAPOWIEDŹ "POCIĄG PROWADZONY TRAKCJĄ PAROWĄ" TO JAK TAKA TRAKCJA PAROWA TWOIM ZDANIEM WYGLĄDA? JAKIEŚ KOMINY NA KIJU NA SZNURKU NAD TORAMI? ZAPAMIĘTAJ RAZ NA ZAWSZE PORZĄDNIE ŻE TRAKCJA TO JEST ABSTRAKCYJNE POWTARRZAM ABSTRAKCYJNE POJĘCIE OZNACZAJĄCE SPOSÓB NAPĘDZANIA POJAZDU SZYNOWEGO I NA PRZYKŁAD CHOCIAŻ PEWNIE NIE WIESZ TAKI NA PRZYKŁAD WIELOCZŁONOWY SZYNOBUS TO INACZEJ SPALINOWY ZESPÓŁ TRAKCYJNY I JAK TERAZ MAM TO ROZUMIEĆ W KONTEKŚCIE TEGO ŻE TWOIM ZDANIEM TWOJEJ GŁUPIEJ ŁEPETYNY CO OZNACZA TAM SŁOWO TRAKCYJNY JAK NIE POTRZEBUJE SIECI TRAKCYJNEJ POWTARZAM SIECI TRAKCYJNEJ A NIE TRAKCJI ŻEBY JECHAĆ? DLACZEGO WCHODZISZ NA TĄ GRUPĘ KTÓRA JEST DLA LUDZI KTÓRZY NAPRAWDĘ KOCHAJĄ KOLEJ I PISZESZ JAKIEŚ BADZIEWIE ŻE TRAKCJA JAKBYŚ BYŁA JAKIMŚ NIEDOROZWINIĘTYM DZIENNIKARZEM TVP INFO ALBO JAKIEGOŚ INNEGO EKSPRESU PODLASKIEGO BO CHYBA ONI SĄ TYLKO TAK GŁUPI ŻE MOGĄ NAPISAĆ ŻE TRAKCJA SIĘ ZERWAŁA KURWA TRAKCJA CZUJESZ TO JAK TO W OGÓLE KURWA BRZMI? I ŻEBY SIĘ NIE ROZPISYWAĆ BO AŻ ŻAL JEST ROZPISYWAĆ SIĘ NAD TAKĄ ŻAŁOSNĄ OSOBĄ JAK TY TO POWIEM LEPIEJ WYEDYTUJ TEN POST ALBO W OGÓLE ZNIKAJ Z TEJ GRUPKI BO NIE POTRZEBUJEMY TUTAJ TAKICH AMATORÓW JAK TY JAK TY TRAKCJI OD SIECI TRAKCYJNEJ NIE ODRÓŻNIASZ TO JA NIE WIEM CZY BYŚ UMIAŁA NA PRZYKŁAD GAGARA Z BIPOM ODRÓŻNIĆ OD BYKA Z BOHUNEM ALBO CO JA MÓWIĘ OD STONKI Z BONANZĄ NAWET TAK ŻE JESZCZE RAZ POWTARZAM OPUŚĆ TĄ GRUPĘ CHYBA ŻE WCZEŚNIEJ DOSTANIESZ BANA OD ADMINA BO JUŻ TWÓJ POST ZGŁOSZONY.');
+    }
+})
+bot.on('message',  message=>{
+    
+    //pozwala na implementację prefixa
+    let args = message.content.substring(PREFIX.length).split(" ")
+
+
+    switch(args[0]){
+        case 'ping':
+            message.channel.send('Co dynastię pingujesz?!')
+            break;
+        case 'info':
+            if(args[1] === 'version'){
+            message.channel.send('Version: ' + version)}
+            else{
+                message.channel.send('Invalid argument')}
+            break;
+            
+        case 'clear':
+        if
+    }
+})
+//logowanie
+bot.login(token);
